@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 
+app = Flask(__name__)
+
 # Define the tables as dictionaries
 puncture_table = {
     '01-05': {'A': 'Glancing blow. No extra damage. +0 hit.', 'B': ' +1 hit.', 'C': ' +2 hits.', 'D': ' +3 hits.', 'E': ' +3 hits.'},
@@ -130,7 +132,6 @@ def get_critical(damage_type, difference, roll, threat_range):
         raise ValueError("Invalid row for roll.")
     return row_data.get(column, "No effect.")
 
-app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
