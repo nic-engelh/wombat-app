@@ -50,8 +50,8 @@
             </div>
         {% elif result %}
             <div class="result-box mt-3">
-                <p><strong>Row:</strong> {{ get_row(roll|int) }}</p>
-                <p><strong>Column:</strong> {{ get_column(difference|int, request.form['threat_range']) }}</p>
+                <p><strong>Row:</strong> {% if row %}{{ row }}{% else %}N/A{% endif %}</p>
+                <p><strong>Column:</strong> {% if column %}{{ column }}{% else %}N/A{% endif %}</p>
                 <p><strong>Result:</strong> {{ result }}</p>
             </div>
         {% endif %}

@@ -137,6 +137,10 @@ def get_critical(damage_type, difference, roll, threat_range):
 def index():
     result = None
     error = None
+    roll = None
+    difference = None
+    row = None
+    column = None
     if request.method == 'POST':
         damage_type = request.form['damage_type']
         threat_range = request.form['threat_range']
@@ -148,7 +152,7 @@ def index():
             column = get_column(difference, threat_range)
         except ValueError as e:
             error = str(e)
-    return render_template('index.html', result=result, error=error)
+    return render_template('index.html', result=result, error=error, roll=roll, difference=difference, row=row, column=column)
 
 if __name__ == '__main__':
     app.run(debug=True)
