@@ -69,11 +69,11 @@ slash_table = {
 tables = {'puncture': puncture_table, 'crush': krush_critical_strike_table, 'slash': slash_table}
 
 threat_ranges = {
-    'a': {'A': 6, 'B': 8, 'C': 10, 'D': 12, 'E': 14, 'F': 16, 'G': 18},  # 20 for x2 damage
-    'b': {'A': 5, 'B': 7, 'C': 9, 'D': 11, 'E': 13, 'F': 15, 'G': 17},  # 19-20 or 20 for x3/x4 damage
-    'c': {'A': 4, 'B': 6, 'C': 8, 'D': 10, 'E': 12, 'F': 14, 'G': 16},  # 18-20
-    'd': {'A': 3, 'B': 5, 'C': 7, 'D': 9, 'E': 11, 'F': 13, 'G': 15},   # 15-20
-    'e': {'A': 10, 'B': 12, 'C': 14, 'D': 16, 'E': 18, 'F': 20, 'G': 22}  # Grapple, Overrun, Bull-rush, Trip, etc.
+    'a': {'A': 6, 'B': 8, 'C': 10, 'D': 12, 'E': 14, 'E': 16, 'E': 18},  # 20 for x2 damage
+    'b': {'A': 5, 'B': 7, 'C': 9, 'D': 11, 'E': 13, 'E': 15, 'E': 17},  # 19-20 or 20 for x3/x4 damage
+    'c': {'A': 4, 'B': 6, 'C': 8, 'D': 10, 'E': 12, 'E': 14, 'E': 16},  # 18-20
+    'd': {'A': 3, 'B': 5, 'C': 7, 'D': 9, 'E': 11, 'E': 13, 'E': 15},   # 15-20
+    'e': {'A': 10, 'B': 12, 'C': 14, 'D': 16, 'E': 18, 'E': 20, 'E': 22}  # Grapple, Overrun, Bull-rush, Trip, etc.
 }
 
 def get_column(difference, threat_range):
